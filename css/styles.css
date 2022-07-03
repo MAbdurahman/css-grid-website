@@ -100,3 +100,291 @@ i {
    font-size: var(--font-size-title);
    color: var(--color-secondary);
 }
+
+/*=============================================
+         header section
+================================================*/
+header#header {
+   /* background-color: var(--color-primary); */
+   grid-column: container-start / container-end;
+   background: linear-gradient(var(--color-primary-m-light),
+         var(--color-primary-m-light)),
+      url("./../img/hero.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         booking section
+================================================*/
+section#booking-content {
+   grid-column: center-start / col-end 6;
+   padding: var(--padding-section);
+
+   display: grid;
+   grid-template-rows: repeat(3, max-content);
+   grid-gap: 2vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         booking date section
+================================================*/
+section#booking-date {
+   grid-column: col-start 7 / center-end;
+   padding: var(--padding-section);
+
+   display: grid;
+   grid-template-rows: repeat(2, 1fr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         villas sections
+================================================*/
+section#villas {
+   grid-column: container-start / container-end;
+
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+   grid-gap: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         motto section
+================================================*/
+section#motto {
+   background-color: var(--color-primary);
+   grid-column: container-start / container-end;
+   padding: 10vh 3vw;
+}
+
+
+
+
+
+
+
+
+
+/*=============================================
+         events sections
+================================================*/
+section#events-content,
+section#features-content {
+   grid-column: container-start / col-end 9;
+
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+
+
+
+/*=============================================
+         events text section
+================================================*/
+section#events-text,
+section#features-text {
+   background-color: var(--color-tertiary);
+   grid-column: col-start 10 / center-end;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   place-items: center;
+}
+
+
+
+
+
+
+
+
+
+/*=============================================
+         gallery text section
+================================================*/
+section#gallery-text {
+   background-color: var(--color-primary);
+   grid-column: center-start / col-end 1;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   place-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         gallery carousel section
+================================================*/
+section#gallery-carousel {
+   grid-column: col-start 2 / container-end;
+   height: 90vh;
+   overflow: hidden;
+   border: solid 0.2rem var(--color-secondary);
+   position: relative;
+}
+
+
+
+
+
+
+
+
+
+/*=============================================
+         feature content section
+================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         testimonials section
+================================================*/
+section#testimonials {
+   grid-column: center-start / center-end;
+   padding: var(--padding-section);
+
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 28rem);
+   grid-gap: 5rem;
+   place-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+         footer section
+================================================*/
+footer#footer {
+   background-color: var(--color-primary);
+   grid-column: container-start / container-end;
+   padding: 6vh 4vw;
+
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   place-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================
+          
+================================================*/
+
+
+
+
+
+
+
+
+
+/*=============================================
+          
+================================================*/
+
+
+
+
+
+
+
+/*=============================================
+          
+================================================*/
