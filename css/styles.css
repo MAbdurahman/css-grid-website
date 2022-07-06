@@ -73,6 +73,9 @@ body {
          [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
    grid-template-rows: 100vh repeat(8, min-content);
 }
+h1 {
+   margin: 0;
+}
 
 a:link,
 a:visited {
@@ -97,7 +100,9 @@ li {
    margin-bottom: 4rem;
 }
 
-i {
+i,
+.svg-inline--fa.fa-sun,
+.svg-inline--fa.fa-clock {
    font-size: var(--font-size-title);
    color: var(--color-secondary);
 }
@@ -147,7 +152,7 @@ header#header {
    z-index: 2;
 
    /* display: flex;
-  justify-content: center;
+justify-content: center;
   align-items: center; */
 
    display: grid;
@@ -360,15 +365,8 @@ header#header {
 }
 
 
-
-
-
-
-
-
-
 /*=============================================
-         booking section
+         booking-content section
 ================================================*/
 section#booking-content {
    grid-column: center-start / col-end 6;
@@ -379,9 +377,54 @@ section#booking-content {
    grid-gap: 2vh;
 }
 
+.booking-content__title {
+   font-size: var(--font-size-title);
+   padding: 0 2rem 1rem;
+   font-weight: 300;
+   position: relative;
+}
+
+.booking-content__title::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 15%;
+   height: 0.2rem;
+   width: 30%;
+   background-color: var(--color-secondary);
+}
+
+.booking-content__para {
+   padding: 2rem;
+}
+
+section#booking-content p,
+.booking-date__contact p {
+   color: var(--color-primary);
+}
+
+.booking-content__icons {
+   margin-left: 2rem;
+
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+.booking-content__icons--weather,
+.booking-content__icons--time {
+   display: grid;
+   grid-template-columns: 0.5fr 1fr;
+   grid-template-rows: 10vh;
+   justify-items: start;
+   align-items: center;
+}
 
 
 
+.svg-inline--fa .fa-sun,
+.svg-inline--fa .fa-clock {
+   font-size: 1rem;
+}
 
 
 
@@ -628,5 +671,116 @@ footer#footer {
 
 
 /*=============================================
-          
+         media queries
 ================================================*/
+@media screen and (max-width: 1000px) {
+
+   /* all links */
+   a:link,
+   a:visited {
+      font-size: calc(1rem + 1vw);
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+   /* header section */
+   .header__logo__content--content__para {
+      font-size: 2rem;
+   }
+
+
+   /* booking date section */
+   section#booking-date {
+      grid-template-rows: repeat(2, max-content);
+   }
+
+   .booking-date__schedule--arrival>div,
+   .booking-date__schedule--departure>div,
+   .booking-date__schedule--guests>div {
+      padding: 4rem;
+      grid-template-columns: min-content;
+   }
+
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Events Text Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+
+   section#events-text,
+   section#gallery-text,
+   section#features-text {
+      display: none;
+   }
+
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Booking Content Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Villas Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Motto Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Events Content Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Gallery Carousel Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Features Content Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Footer Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+   div[class^="villas"] p[class^="villas"] {
+      margin: 1.5rem 0 4rem 0;
+   }
+
+   section#events-content,
+   section#features-content {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   }
+
+   section#events-content,
+   section#gallery-carousel,
+   section#features-content {
+      grid-column: center-start / center-end;
+   }
+
+   section#events-content>div:first-child,
+   section#events-content>div:last-child,
+   section#features-content>div:first-child,
+   section#features-content>div:last-child {
+      border: none;
+   }
+
+   .booking-content__para,
+   div[class^="villas"] p[class^="villas"],
+   .motto__content--para,
+   section#events-content>div p[class*="para"],
+   section#features-content>div p[class*="para"],
+   footer#footer p {
+      font-size: 1.5rem;
+   }
+
+   /* Carousel Left/Right Buttons */
+   .gallery-carousel__btn i {
+      font-size: 5rem;
+   }
+
+   /* Carousel Navigation */
+   .gallery-carousel__nav {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 3vh;
+      grid-column-gap: 10vw;
+      height: 12%;
+   }
+
+   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Footer Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
+
+   footer#footer {
+      padding: 4vh 2vw;
+   }
+}
