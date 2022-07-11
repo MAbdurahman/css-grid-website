@@ -768,6 +768,20 @@ section#features-text {
    place-items: center;
 }
 
+.events-text__content,
+.features-text__content {
+   transform: rotate(90deg);
+}
+
+.events-text__content--title,
+.gallery-text__content--title,
+.features-text__content--title {
+   font-size: var(--font-size-title);
+   font-weight: 500;
+   color: white;
+   letter-spacing: 2px;
+}
+
 
 
 
