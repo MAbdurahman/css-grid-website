@@ -12,6 +12,11 @@
 			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<!--fontawesome icons-->
+		<script
+				src="https://kit.fontawesome.com/fbadad80a0.js"
+				crossorigin="anonymous"
+		></script>
 		<!-- normalize -->
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<!-- main styles -->
@@ -32,8 +37,8 @@
 						<div>
 							<ul>
 								<li><a href="#">Home</a></li>
-								<li><a href="#">Villas</a></li>
 								<li><a href="#">About</a></li>
+								<li><a href="#">Villas</a></li>
 								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
@@ -251,7 +256,51 @@
 		</section>
 
 		<!-- gallery carousel -->
-		<section id="gallery-carousel">Gallery carousel</section>
+		<section id="gallery-carousel">
+			<!-- Button Left -->
+			<button class="gallery-carousel__btn gallery-carousel__btn--left hidden">
+				<i class="fas fa-caret-left"></i>
+			</button>
+
+			<!-- Image Container -->
+			<div class="gallery-carousel__img-container">
+				<ul class="gallery-carousel__img-container--list">
+					<li class="gallery-carousel__img-container--list__item current--img">
+						<img src="./img/gallery/gallery-1.jpg" alt="villa" />
+					</li>
+
+					<li class="gallery-carousel__img-container--list__item">
+						<img src="./img/gallery/gallery-2.jpg" alt="villa" />
+					</li>
+
+					<li class="gallery-carousel__img-container--list__item">
+						<img src="./img/gallery/gallery-7.jpg" alt="villa" />
+					</li>
+
+					<li class="gallery-carousel__img-container--list__item">
+						<img src="./img/gallery/gallery-5.jpg" alt="villa" />
+					</li>
+
+					<li class="gallery-carousel__img-container--list__item">
+						<img src="./img/gallery/gallery-10.jpg" alt="villa" />
+					</li>
+				</ul>
+			</div>
+
+			<!-- Button Right -->
+			<button class="gallery-carousel__btn gallery-carousel__btn--right">
+				<i class="fas fa-caret-right"></i>
+			</button>
+
+			<!-- Carousel Nav -->
+			<div class="gallery-carousel__nav">
+				<button class="gallery-carousel__nav--btn current--img"></button>
+				<button class="gallery-carousel__nav--btn"></button>
+				<button class="gallery-carousel__nav--btn"></button>
+				<button class="gallery-carousel__nav--btn"></button>
+				<button class="gallery-carousel__nav--btn"></button>
+			</div>
+		</section>
 
 		<!-- feature content -->
 		<section id="feature-content">Feature content</section>
@@ -268,7 +317,7 @@
 		<!-- jquery script -->
 		<script src="./js/jquery-3.4.1.min.js"></script>
 		<!--font awesome-->
-		<script src="./js/all.min.js"></script>
+		<!--<script src="./js/all.min.js"></script>-->
 		<!-- main scripts -->
 		<script src="./js/scripts.js"></script>
 	</body>
