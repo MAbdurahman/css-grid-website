@@ -890,20 +890,41 @@ div.gallery-carousel__img-container {
 }
 
 
+/*=============================================
+         feature content section
+================================================*/
+section#features-content > div:first-child {
+   background: linear-gradient(
+           var(--color-secondary-m-light),
+           var(--color-secondary-m-light)
+   ),
+   url("./../img/features/cocktail.jpg");
+   border-right: solid 2px var(--color-secondary);
+}
 
+section#features-content > div:last-child {
+   background: linear-gradient(
+           var(--color-secondary-m-light),
+           var(--color-secondary-m-light)
+   ),
+   url("./../img/features/surfing.jpg");
+   border-left: solid 2px var(--color-secondary);
+}
 
-
-
-
+section#features-content > div:first-child,
+section#features-content > div:last-child {
+   background-size: cover;
+   background-position: left;
+}
 
 
 
 /*=============================================
-         feature content section
+          feature text section
 ================================================*/
-
-
-
+section#features-text {
+   background-color: var(--color-secondary);
+}
 
 
 
