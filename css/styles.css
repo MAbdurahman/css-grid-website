@@ -850,7 +850,7 @@ div.gallery-carousel__img-container {
 
 /* Button Right */
 .gallery-carousel__btn--right {
-   right: 0;
+   right: 5px;
 }
 
 /* Carousel Nav */
@@ -925,16 +925,6 @@ section#features-content > div:last-child {
 section#features-text {
    background-color: var(--color-secondary);
 }
-
-
-
-
-
-
-
-
-
-
 
 /*=============================================
          testimonials section
@@ -1077,7 +1067,6 @@ footer#footer {
       font-size: 2rem;
    }
 
-
    /* booking date section */
    section#booking-date {
       grid-template-rows: repeat(2, max-content);
@@ -1089,8 +1078,6 @@ footer#footer {
       padding: 4rem;
       grid-template-columns: min-content;
    }
-
-
 
 
    /* events, gallery, features section */
@@ -1147,8 +1134,7 @@ footer#footer {
       /*height: 12%;
 */   }
 
-   /*@@##$$%%^^&&**@@##$$%%^^&&**^^ Footer Section ^^**@@##$$%%^^&&**@@##$$%%^^&&*/
-
+   /* footer section*/
    footer#footer {
       padding: 4vh 2vw;
    }
